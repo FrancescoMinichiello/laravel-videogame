@@ -11,16 +11,10 @@
                 <div class="mb-3">
                     <label for="projet-name" class="form-label">Name:</label>
                     <input type="text" class="form-control" id="project-name" name="name" value="{{ old('name') }}">
-                    @error('name')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="projet-name" class="form-label">Genre:</label>
                     <input type="text" class="form-control" id="project-name" name="name" value="{{ old('genre') }}">
-                    @error('genre')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
                 </div>
                 <div class="mb-3 d-flex justify-content-center align-items-center">
                     <button type="submit" class="btn btn-success me-3">
