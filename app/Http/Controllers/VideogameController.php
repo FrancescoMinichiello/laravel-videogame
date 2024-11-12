@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Videogame;
 
 class VideogameController extends Controller
 {
@@ -35,7 +36,8 @@ class VideogameController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $videogame = Videogame::findOrFail($id);
+        return view("videogames.show", compact("videogame"));
     }
 
     /**
