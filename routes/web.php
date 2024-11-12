@@ -1,8 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VideogameController;
-use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +23,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get("/videogames/{id}", [VideogameController::class, "show"])->name("videogames.show");
+Route::get('/create', [App\Http\Controllers\VideogameController::class, 'create'])->name('create');
