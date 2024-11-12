@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\VideogameController;
+use App\Models\Videogame;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +23,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Index
+Route::get('/videogames', [VideogameController::class, 'index'])->name('videogames.index');
