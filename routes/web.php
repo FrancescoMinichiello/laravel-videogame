@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VideogameController;
+use App\Models\Videogame;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,5 +23,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/videogames', [VideogameController::class, 'index'])->name('videogames.index');
 Route::get("/videogames/{id}", [VideogameController::class, "show"])->name("videogames.show");
 Route::get('/create', [App\Http\Controllers\VideogameController::class, 'create'])->name('create');

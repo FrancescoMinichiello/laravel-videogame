@@ -10,9 +10,9 @@ class VideogameController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        //
+    public function index() {
+        $videogames_list = Videogame::all();
+        return view('videogames.index', compact('videogames_list'));
     }
 
     /**
