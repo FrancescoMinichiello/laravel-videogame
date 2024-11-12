@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Videogame;
 use Illuminate\Http\Request;
 
 class VideogameController extends Controller
@@ -19,7 +20,7 @@ class VideogameController extends Controller
      */
     public function create()
     {
-        //
+        return view("videogames.create");
     }
 
     /**
